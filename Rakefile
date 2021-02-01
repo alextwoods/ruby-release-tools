@@ -15,5 +15,6 @@ task 'run-sdk-build' => [
   'run-codegen',
   'add-changelog-entries',
   'bump-versions',
-  'test:unit'
+  'test:unit',
+  'build:gems'
 ]

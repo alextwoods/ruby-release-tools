@@ -1,3 +1,4 @@
+require 'rubygems/package'
 
 # download the build definition and models (if they exist)
 task 'download-build-inputs' do
@@ -105,7 +106,16 @@ task 'test:unit'  do
 end
 
 task 'build:gems' do
-
+  FileUtils.mkdir_p('gems')
+  Dir.glob("sdk/**/*.gemspec").each do |gemspec_path|
+    gem_path = ''
+    Dir.chdir(File.dirname(gemspec_path)) do
+      gemspec = Gem::Specification.load(File.basename(gemspec_path))
+      gem_path = Gem::Package.build(gemspec)
+    end
+    FileUtils.mv(File.join(File.dirname(gemspec_path), gem_path), "gems/")
+  end
+  puts "Built gems"
 end
 
 task 'test-task' do
