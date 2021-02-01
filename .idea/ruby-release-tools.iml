@@ -22,14 +22,32 @@
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.3, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.4, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.0, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="yard (v0.9.26, chruby: ruby-3.0.0) [gem]" level="application" />
   </component>
   <component name="RakeTasksCache">
     <option name="myRootTask">
       <RakeTaskImpl id="rake">
         <subtasks>
+          <RakeTaskImpl description="" fullCommand="add-changelog-entries" id="add-changelog-entries" />
+          <RakeTaskImpl id="build">
+            <subtasks>
+              <RakeTaskImpl description="" fullCommand="build:gems" id="gems" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl description="" fullCommand="bump-versions" id="bump-versions" />
+          <RakeTaskImpl description="" fullCommand="docs" id="docs" />
           <RakeTaskImpl description="" fullCommand="download-build-inputs" id="download-build-inputs" />
-          <RakeTaskImpl description="" fullCommand="download-models" id="download-models" />
+          <RakeTaskImpl description="" fullCommand="load-sdk-rakefile" id="load-sdk-rakefile" />
+          <RakeTaskImpl description="" fullCommand="run-codegen" id="run-codegen" />
+          <RakeTaskImpl description="" fullCommand="run-sdk-build" id="run-sdk-build" />
           <RakeTaskImpl description="" fullCommand="test-task" id="test-task" />
+          <RakeTaskImpl id="test">
+            <subtasks>
+              <RakeTaskImpl description="" fullCommand="test:unit" id="unit" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl description="" fullCommand="update-sdk-models" id="update-sdk-models" />
+          <RakeTaskImpl description="" fullCommand="update-service-json" id="update-service-json" />
         </subtasks>
       </RakeTaskImpl>
     </option>

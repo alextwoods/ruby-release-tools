@@ -3,6 +3,7 @@ require_relative 'lib/service_json_updater'
 require_relative 'lib/sdk_helper'
 require_relative 'lib/changelog_updater'
 require_relative 'lib/gem_version_updater'
+require_relative 'lib/gem_helper'
 
 Dir.glob('tasks/**/*.rake').each do |task_file|
   load(task_file)
