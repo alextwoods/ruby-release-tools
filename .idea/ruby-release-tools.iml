@@ -11,6 +11,7 @@
     </content>
     <orderEntry type="jdk" jdkName="chruby: ruby-3.0.0" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.7.0, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-eventstream (v1.1.0, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-partitions (v1.422.0, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-sdk-core (v3.111.2, chruby: ruby-3.0.0) [gem]" level="application" />
@@ -18,38 +19,22 @@
     <orderEntry type="library" scope="PROVIDED" name="aws-sdk-s3 (v1.87.0, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-sigv4 (v1.2.2, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.2.5, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday (v1.3.0, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="faraday-net_http (v1.0.1, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.4.0, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multipart-post (v2.1.1, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="octokit (v4.20.0, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="public_suffix (v4.0.6, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.3, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.4, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ruby2_keywords (v0.0.4, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.0, chruby: ruby-3.0.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sawyer (v0.8.2, chruby: ruby-3.0.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="yard (v0.9.26, chruby: ruby-3.0.0) [gem]" level="application" />
   </component>
   <component name="RakeTasksCache">
     <option name="myRootTask">
-      <RakeTaskImpl id="rake">
-        <subtasks>
-          <RakeTaskImpl description="" fullCommand="add-changelog-entries" id="add-changelog-entries" />
-          <RakeTaskImpl id="build">
-            <subtasks>
-              <RakeTaskImpl description="" fullCommand="build:gems" id="gems" />
-            </subtasks>
-          </RakeTaskImpl>
-          <RakeTaskImpl description="" fullCommand="bump-versions" id="bump-versions" />
-          <RakeTaskImpl description="" fullCommand="docs" id="docs" />
-          <RakeTaskImpl description="" fullCommand="download-build-inputs" id="download-build-inputs" />
-          <RakeTaskImpl description="" fullCommand="load-sdk-rakefile" id="load-sdk-rakefile" />
-          <RakeTaskImpl description="" fullCommand="run-codegen" id="run-codegen" />
-          <RakeTaskImpl description="" fullCommand="run-sdk-build" id="run-sdk-build" />
-          <RakeTaskImpl description="" fullCommand="test-task" id="test-task" />
-          <RakeTaskImpl id="test">
-            <subtasks>
-              <RakeTaskImpl description="" fullCommand="test:unit" id="unit" />
-            </subtasks>
-          </RakeTaskImpl>
-          <RakeTaskImpl description="" fullCommand="update-sdk-models" id="update-sdk-models" />
-          <RakeTaskImpl description="" fullCommand="update-service-json" id="update-service-json" />
-        </subtasks>
-      </RakeTaskImpl>
+      <RakeTaskImpl id="rake" />
     </option>
   </component>
 </module>
