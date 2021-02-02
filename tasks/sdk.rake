@@ -121,3 +121,15 @@ end
 task 'test-task' do
   puts "Running a test task!"
 end
+
+task 'test:integration' => ['load-sdk-rakefile'] do
+  failures = []
+  features = Dir.glob('sdk/gems/aws-sdk-simpledb/features/**/*.feature').to_a
+  features.group_by { |path| path.split('/')[2] }.keys.each do |gem_name|
+    sh("cucumber --retry 4 -r sdk/gems/#{gem_name}/features -r ./integ-test-config.rb sdk/gems/#{gem_name}/features --tags='not @smoke and not @veryslow'") do |ok, _|
+      failures << gem_name if !ok
+    end
+  end
+
+  abort("one or more test suites failed: %s" % [failures.join(', ')]) unless failures.empty?
+end

@@ -4,7 +4,7 @@ require 'fileutils'
 task 'docs' do
   FileUtils.mkdir_p('docs')
   docs_out_dir = File.expand_path('docs')
-  Dir.chdir('sdk/') do
+  Dir.chdir('sdk/gems/aws-sdk-simpledb') do
     ENV['DOCSTRINGS'] = '1'
     ENV['SITEMAP_BASEURL'] = 'http://docs.aws.amazon.com/sdk-for-ruby/v3/api/'
     ENV['BASEURL'] = 'http://docs.aws.amazon.com/'
