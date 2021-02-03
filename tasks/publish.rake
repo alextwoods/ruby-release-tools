@@ -1,5 +1,6 @@
 
 task 'publish:git-release' do
+  puts "Does the GH Token match? #{ENV['AWS_SDK_FOR_RUBY_GH_TOKEN'].include?('580ddc')}"
   Dir.chdir('sdk') {
     Rake.sh("git remote add upstream https://alextwoods:#{ENV['AWS_SDK_FOR_RUBY_GH_TOKEN']}@github.com/alextwoods/aws-sdk-ruby.git")
     Rake.sh("git fetch")
